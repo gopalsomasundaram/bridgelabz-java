@@ -6,14 +6,14 @@ package ioprogramming.designpatterns;
 
 interface Shape{void Draw();}
 
-class Circle implements Shape{
+class Circle implements Shape {
     @Override
     public void Draw(){
         System.out.println("circle");
     }
 }
 
-class Rectangle implements Shape{
+class Rectangle implements Shape {
     @Override
     public void Draw(){
         System.out.println("rectangle");
@@ -33,7 +33,7 @@ public class FactoryMethodDemonstration {
     public static void main(String[] args){
         Shape firstShape = ShapeFactory.getShape("Circle");
         Shape secondShape = ShapeFactory.getShape("rectangle");
-        if(firstShape instanceof Shape && secondShape instanceof Shape){
+        if(firstShape instanceof Shape_Bridge && secondShape instanceof Shape_Bridge){
             System.out.println("Both of the shapes were generated successfully");
         }
     }
